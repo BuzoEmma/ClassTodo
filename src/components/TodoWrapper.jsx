@@ -55,7 +55,7 @@ const TodoWrapper = () => {
     if (storedTodos) {
       setTodos(storedTodos);
 
-      console.log("list of to do list", st)
+      console.log("list of to do list")
     }
   }, []);
 
@@ -83,3 +83,54 @@ const TodoWrapper = () => {
 };
 
 export default TodoWrapper;
+
+
+
+
+// const TodoList = ({ addTodo }) => {
+//   const [value, setvalue] = useState("");
+//   const [warn, setWarn] = useState(false);
+
+//   const handleChange = (e) => {
+//     setvalue(e.target.value);
+//     // setWarn(value == "");
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     if (value) {
+//       addTodo(value);
+//       setvalue("");
+//       setWarn(false);
+//     } else {
+//       setWarn(true);
+//     }
+//   };
+
+//   useEffect(() => {
+//     setWarn(false);
+//     return () => {
+//       setWarn(value == "");
+//     };
+//   }, [value]);
+
+//   return (
+//     <div>
+//       <form action="" className="TodoForm" onSubmit={handleSubmit}>
+//         <input
+//           type="text"
+//           value={value}
+//           className="todo-input"
+//           placeholder="What is the task today?"
+//           onChange={handleChange}
+//         />
+//         <button type="submit" className="todo-btn">
+//           Create Task
+//         </button>
+//         {warn && <p style={{ color: "red" }}>Hello World do the right thing</p>}
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default TodoList;
